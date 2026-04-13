@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
             ETicketingTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "ETicketing",
+                        name = "Aplikasi ETicketing",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
