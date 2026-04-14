@@ -46,22 +46,26 @@ class DestinationsFragment : Fragment() {
             startActivity(Intent(requireContext(), AddDestinationActivity::class.java))
         }
 
-        adapter = DestinationAdapter(emptyList()) { destination ->
-            if (userId != -1L) {
-                lifecycleScope.launch {
-                    val ticket = Ticket(
-                        userId = userId,
-                        destinationId = destination.id,
-                        bookingDate = System.currentTimeMillis(),
-                        quantity = 1,
-                        totalPrice = destination.price,
-                        status = "CONFIRMED"
-                    )
-                    db.ticketDao().bookTicket(ticket)
-                    Toast.makeText(requireContext(), "Tiket untuk ${destination.name} berhasil dipesan!", Toast.LENGTH_SHORT).show()
+        adapter = DestinationAdapter(
+            emptyList(),
+            { destination ->
+                if (userId != -1L) {
+                    lifecycleScope.launch {
+                        val ticket = Ticket(
+                            userId = userId,
+                            destinationId = destination.id,
+                            bookingDate = System.currentTimeMillis(),
+                            quantity = 1,
+                            totalPrice = destination.price,
+                            status = "CONFIRMED"
+                        )
+                        db.ticketDao().bookTicket(ticket)
+                        Toast.makeText(requireContext(), "Tiket untuk ${destination.name} berhasil dipesan!", Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }
-        }
+            },
+            role ?: "USER"
+        )
 
         binding.rvDestinations.layoutManager = LinearLayoutManager(requireContext())
         binding.rvDestinations.adapter = adapter

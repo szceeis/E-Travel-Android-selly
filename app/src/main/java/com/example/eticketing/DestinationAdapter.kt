@@ -7,10 +7,12 @@ import com.example.eticketing.data.Destination
 import com.example.eticketing.databinding.ItemDestinationBinding
 import java.text.NumberFormat
 import java.util.*
+import android.view.View
 
 class DestinationAdapter(
     private var destinations: List<Destination>,
-    private val onBookClick: (Destination) -> Unit
+    private val onBookClick: (Destination) -> Unit,
+    private val role: String
 ) : RecyclerView.Adapter<DestinationAdapter.ViewHolder>() {
 
     class ViewHolder(val binding: ItemDestinationBinding) : RecyclerView.ViewHolder(binding.root)
@@ -30,6 +32,11 @@ class DestinationAdapter(
 
         holder.binding.btnBook.setOnClickListener {
             onBookClick(dest)
+        }
+        if (role == "ADMIN") {
+            holder.binding.btnBook.visibility = View.GONE
+        } else {
+            holder.binding.btnBook.visibility = View.VISIBLE
         }
     }
 
