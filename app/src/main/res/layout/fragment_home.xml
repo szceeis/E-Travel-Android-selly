@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_light">
+    android:background="@color/grey_light"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +61,7 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="16dp"
-                android:background="@drawable/Bromo">
+                android:background="@drawable/bromo">
 
 
 
@@ -83,11 +85,11 @@
 
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="55dp"
                     android:text="Jelajahi Destinasi"
                     android:textAllCaps="false"
                     android:backgroundTint="@color/travl_blue"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:textSize="12sp"/>
             </LinearLayout>
         </FrameLayout>
@@ -138,7 +140,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/Bromo"
+                        android:src="@drawable/bromo"
                         android:scaleType="centerCrop"/>
 
 
