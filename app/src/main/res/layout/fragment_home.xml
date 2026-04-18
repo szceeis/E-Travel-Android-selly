@@ -103,7 +103,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="List Destinasi"
+                android:text="Destinasi Unggulan"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/text_dark"/>
@@ -119,7 +119,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lihat Semua Destinasi ->"
+                android:text="Lihat Semua Destinasi ➡"
                 android:textColor="@color/travl_blue"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"/>
