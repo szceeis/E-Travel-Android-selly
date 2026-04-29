@@ -17,7 +17,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/travl_blue"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="24dp" />
 
         <EditText
             android:id="@+id/etDestName"
@@ -26,7 +26,7 @@
             android:hint="Nama Destinasi"
             android:background="@drawable/search_bar_bg"
             android:paddingHorizontal="16dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/etDestLocation"
@@ -35,7 +35,7 @@
             android:hint="Lokasi"
             android:background="@drawable/search_bar_bg"
             android:paddingHorizontal="16dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/etDestPrice"
@@ -45,7 +45,7 @@
             android:inputType="numberDecimal"
             android:background="@drawable/search_bar_bg"
             android:paddingHorizontal="16dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/etDestCategory"
@@ -54,7 +54,7 @@
             android:hint="Kategori (Pantai/Gunung/dll)"
             android:background="@drawable/search_bar_bg"
             android:paddingHorizontal="16dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/etDestDescription"
@@ -64,7 +64,7 @@
             android:gravity="top"
             android:padding="16dp"
             android:background="@drawable/search_bar_bg"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="16dp" />
 
         <ImageView
             android:id="@+id/ivPreview"
@@ -72,14 +72,23 @@
             android:layout_height="150dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnTambahFoto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Tambah Foto"
+            android:textAllCaps="false"
+            android:backgroundTint="#757575"
+            android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/btnSaveDest"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Simpan Destinasi"
-            android:backgroundTint="@color/travl_blue"/>
+            android:backgroundTint="@color/travl_blue" />
 
     </LinearLayout>
 </ScrollView>
