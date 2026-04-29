@@ -66,6 +66,14 @@
             android:background="@drawable/search_bar_bg"
             android:layout_marginBottom="24dp"/>
 
+        <ImageView
+            android:id="@+id/ivPreview"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginBottom="16dp"/>
+
         <Button
             android:id="@+id/btnSaveDest"
             android:layout_width="match_parent"
