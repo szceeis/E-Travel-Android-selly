@@ -5,6 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface DestinationDao {
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertDestination(destination: Destination)
 
@@ -22,4 +23,7 @@ interface DestinationDao {
 
     @Query("SELECT * FROM destinations WHERE id = :id")
     suspend fun getDestinationById(id: Long): Destination?
+
+    @Query("SELECT * FROM destinations WHERE pengelolaId = :pengelolaId ORDER BY name ASC")
+    fun getDestinationsByPengelola(pengelolaId: Long): Flow<List<Destination>>
 }

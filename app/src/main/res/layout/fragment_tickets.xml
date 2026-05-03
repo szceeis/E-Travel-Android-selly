@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:orientation="vertical"
+    android:background="#F5F5F5">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:text="Tiket Saya"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:padding="16dp"/>
 
+    <TextView
+        android:id="@+id/tvEmptyTiket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Belum ada tiket.\nYuk pesan destinasi favoritmu!"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:padding="48dp"
+        android:visibility="gone"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Travl" android:textStyle="bold" android:textSize="20sp" android:textColor="@color/travl_blue"/>
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_menu_placeholder" android:layout_alignParentEnd="true"/>
-        </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTiketSaya"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:clipToPadding="false"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tiket Saya"
-            android:textStyle="bold"
-            android:textSize="22sp"
-            android:layout_marginBottom="16dp"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvTickets"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"/>
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>

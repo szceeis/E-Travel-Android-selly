@@ -1,39 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="Travl"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ETicketing">
+        android:enableOnBackInvokedCallback="true"
+        android:theme="@style/Theme.Eticketing">
 
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.eticketing.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity android:name=".activities.SplashActivity" android:exported="true" android:theme="@style/Theme.Eticketing.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".activities.LoginActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.RegisterActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".MainActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.AdminActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.KelolaDestinasiActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.FormDestinasiActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.KelolaUserActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.AdminTiketActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.PengelolaActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.DestinasiSayaActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.TiketPengelolaActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.DetailDestinasiActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <activity android:name=".activities.AdminBrowseActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
+        <!-- Step 16: Tambah KategoriActivity -->
+        <activity android:name=".activities.KategoriActivity" android:exported="false" android:theme="@style/Theme.Eticketing.NoActionBar"/>
 
-        <activity
-            android:name=".RegisterActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
-        <activity
-            android:name=".AddDestinationActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.ETicketing" />
     </application>
-
 </manifest>

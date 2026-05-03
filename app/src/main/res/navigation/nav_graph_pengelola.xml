@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_pengelola"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.eticketing.fragments.HomeFragment"
+        android:label="Home"/>
+
+    <fragment
+        android:id="@+id/nav_destinasi"
+        android:name="com.example.eticketing.fragments.DestinationsFragment"
+        android:label="Destinasi"/>
+
+    <!-- Tiket Saya untuk pengelola = kelola tiket destinasi mereka -->
+    <fragment
+        android:id="@+id/nav_tiket"
+        android:name="com.example.eticketing.fragments.TiketPengelolaFragment"
+        android:label="Kelola Tiket"/>
+
+    <fragment
+        android:id="@+id/nav_destinasi_saya"
+        android:name="com.example.eticketing.fragments.DestinasiSayaFragment"
+        android:label="Destinasi Saya"/>
+
+    <fragment
+        android:id="@+id/nav_profil"
+        android:name="com.example.eticketing.fragments.ProfilFragment"
+        android:label="Profil"/>
+
+</navigation>

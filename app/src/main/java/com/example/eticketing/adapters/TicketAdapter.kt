@@ -1,4 +1,4 @@
-package com.example.eticketing
+package com.example.eticketing.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.eticketing.data.Ticket
 import com.example.eticketing.databinding.ItemTicketBinding
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
+import java.util.Locale
 
 class TicketAdapter(
     private var tickets: List<Pair<Ticket, String>> // Ticket and Destination Name
@@ -22,10 +23,10 @@ class TicketAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val (ticket, destName) = tickets[position]
         holder.binding.tvTicketDestName.text = destName
-        
+
         val sdf = SimpleDateFormat("dd MMM yyyy, HH:mm", Locale.getDefault())
         holder.binding.tvTicketDate.text = sdf.format(Date(ticket.bookingDate))
-        
+
         holder.binding.tvTicketStatus.text = ticket.status
     }
 

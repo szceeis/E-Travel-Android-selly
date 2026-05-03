@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hero Image -->
+        <ImageView
+            android:id="@+id/ivDetailImage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:background="#1565C0"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvDetailName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:paddingBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvDetailLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="#666666"/>
+
+                <TextView
+                    android:id="@+id/tvDetailCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#1565C0"
+                    android:background="#E3F2FD"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDetailPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#1565C0"
+                android:paddingBottom="8dp"/>
+
+            <!-- Info pengelola -->
+            <TextView
+                android:id="@+id/tvDetailPengelola"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:paddingBottom="16dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvDetailDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#444444"
+                android:lineSpacingMultiplier="1.5"
+                android:paddingBottom="24dp"/>
+
+            <!-- Jumlah Tiket -->
+            <TextView
+                android:id="@+id/tvLabelJumlahTiket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Tiket"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:paddingBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="16dp">
+
+                <Button
+                    android:id="@+id/btnMinus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="−"
+                    android:textSize="18sp"
+                    android:padding="0dp"
+                    android:backgroundTint="#E0E0E0"
+                    android:textColor="#1A1A1A"/>
+
+                <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:gravity="center"/>
+
+                <Button
+                    android:id="@+id/btnPlus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:padding="0dp"
+                    android:backgroundTint="#1565C0"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTotalHarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#2E7D32"
+                android:textStyle="bold"
+                android:paddingBottom="20dp"/>
+
+            <Button
+                android:id="@+id/btnBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pesan Sekarang"
+                android:padding="14dp"
+                android:textSize="16sp"
+                android:backgroundTint="#1565C0"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

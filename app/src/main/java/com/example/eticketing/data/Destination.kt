@@ -11,6 +11,7 @@ data class Destination(
     val description: String,
     val location: String,
     val price: Double,
-    val category: String, // "Pantai", "Gunung", dll
-    val imageUrl: String? = null
+    val category: String,
+    val imageUrl: String? = null,
+    val pengelolaId: Long = 0
 )

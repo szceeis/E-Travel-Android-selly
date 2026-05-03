@@ -1,13 +1,13 @@
-package com.example.eticketing
+package com.example.eticketing.adapters
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eticketing.data.Destination
 import com.example.eticketing.databinding.ItemDestinationBinding
 import java.text.NumberFormat
-import java.util.*
-import android.view.View
+import java.util.Locale
 
 class DestinationAdapter(
     private var destinations: List<Destination>,
@@ -26,7 +26,7 @@ class DestinationAdapter(
         val dest = destinations[position]
         holder.binding.tvDestName.text = dest.name
         holder.binding.tvDestLocation.text = dest.location
-        
+
         val formatter = NumberFormat.getCurrencyInstance(Locale("id", "ID"))
         holder.binding.tvDestPrice.text = formatter.format(dest.price)
 

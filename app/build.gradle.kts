@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.eticketing"
-    compileSdk = 35 // Menggunakan versi SDK stabil yang umum
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.eticketing"
@@ -15,7 +15,6 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -39,10 +38,8 @@ android {
         viewBinding = true
         compose = true
     }
-
-    // Tambahkan ini untuk Compose
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.15" // Versi yang umum untuk Kotlin 1.9+
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
 }
 
@@ -54,7 +51,7 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
 
-    // Compose Dependencies (Diperlukan karena folder ui.theme masih ada)
+    // Compose
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
@@ -69,17 +66,21 @@ dependencies {
     // RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.3.2")
 
-    // Lifecycle (ViewModel & LiveData)
+    // Lifecycle
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
 
-    // Room Database
+    // Room
     val roomVersion = "2.6.1"
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
     implementation("androidx.room:room-common:$roomVersion")
     ksp("androidx.room:room-compiler:$roomVersion")
+
+    // Glide — untuk load gambar
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    ksp("com.github.bumptech.glide:ksp:4.16.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvFormTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah Destinasi"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:paddingBottom="24dp"/>
+
+        <!-- Foto -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Foto Destinasi"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:paddingBottom="6dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/ivPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E0E0E0"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/tvPlaceholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="📷 Tap untuk pilih foto"
+                android:textSize="16sp"
+                android:textColor="#888888"/>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnPilihGambar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Foto dari Galeri"
+            android:backgroundTint="#E3F2FD"
+            android:textColor="#1565C0"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Nama -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Destinasi"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:paddingBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan nama destinasi"
+            android:textColorHint="#AAAAAA"
+            android:textColor="#1A1A1A"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="textCapSentences"/>
+
+        <!-- Lokasi -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lokasi"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:paddingBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contoh: Bali, Lombok, Yogyakarta"
+            android:textColorHint="#AAAAAA"
+            android:textColor="#1A1A1A"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="textCapSentences"/>
+
+        <!-- Kategori (diganti dari EditText ke Spinner) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kategori"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:paddingBottom="6dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Harga -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harga (Rp)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:paddingBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contoh: 150000"
+            android:textColorHint="#AAAAAA"
+            android:textColor="#1A1A1A"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="numberDecimal"/>
+
+        <!-- Deskripsi -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:paddingBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsikan tempat wisata ini..."
+            android:textColorHint="#AAAAAA"
+            android:textColor="#1A1A1A"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"
+            android:minLines="3"
+            android:gravity="top"
+            android:inputType="textMultiLine"/>
+
+        <!-- Assign Pengelola -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Assign Pengelola"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvPengelolaInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠️ Belum ada pengelola dipilih"
+            android:textSize="13sp"
+            android:textColor="#FF6F00"
+            android:paddingBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerPengelola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="SIMPAN"
+            android:textSize="16sp"
+            android:backgroundTint="#1565C0"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+</ScrollView>

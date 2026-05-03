@@ -12,5 +12,5 @@ data class Ticket(
     val bookingDate: Long,
     val quantity: Int,
     val totalPrice: Double,
-    val status: String // "PENDING", "CONFIRMED", "CANCELLED"
+    val status: String
 )

@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 data class User(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
-    val username: String,
+    val nama: String,
     val email: String,
     val password: String,
-    val role: String // "ADMIN" atau "USER"
+    val role: String = "user"
 )

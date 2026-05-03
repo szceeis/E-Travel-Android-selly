@@ -1,14 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme. -->
-    <style name="Theme.ETicketing" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/travl_blue</item>
-        <item name="colorPrimaryDark">@color/travl_blue_dark</item>
-        <item name="colorAccent">@color/travl_blue</item>
 
-        <!-- Customize your theme here. -->
-        <item name="android:statusBarColor">@color/travl_blue_dark</item>
-        <item name="android:windowBackground">@color/white</item>
+    <style name="Theme.Eticketing" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#1565C0</item>
+        <item name="colorPrimaryVariant">#0D47A1</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#1565C0</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:statusBarColor">#1565C0</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">#F5F5F5</item>
     </style>
+
+    <style name="Theme.Eticketing.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#1565C0</item>
+        <item name="colorPrimaryVariant">#0D47A1</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#1565C0</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:statusBarColor">#1565C0</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">#F5F5F5</item>
+    </style>
+
+    <!-- Style ini dipanggil di activity_login.xml dan activity_register.xml -->
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#1565C0</item>
+        <item name="boxBackgroundColor">#FFFFFF</item>
+        <item name="hintTextColor">#1565C0</item>
+    </style>
+
 </resources>
